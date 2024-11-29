@@ -6,14 +6,15 @@ namespace Tyuiu.NedelkinFA.Sprint4.Task0.V15.Lib
     {
         public int GetMultOddArrEl(int[] array)
         {
-            for (int i = 0; i <= array.Length - 1; i++)
+            int product = 1;
+            foreach (int num in array)
             {
-                if (array[i] == 0)
+                if (num % 2 != 0)
                 {
-                    array[i] = 1;
+                    product *= num;
                 }
             }
-            return array;
+            return product;
         }
     }
 }

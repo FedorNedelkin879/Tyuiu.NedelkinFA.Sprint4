@@ -1,17 +1,17 @@
 ﻿using Tyuiu.NedelkinFA.Sprint4.Task0.V15.Lib;
 
 DataService ds = new DataService();
-int[] numsArray = { 4, 0, 3, 0, 10 };
-Console.WriteLine("исходящий massive");
-for (int i = 0; i <= numsArray.Length - 1; i++)
+int[] numsArray = { 9, 8, 7, 6, 5, 7, 3, 2, 7, 3 };
+
+Console.WriteLine("Исходный массив:");
+foreach (int num in numsArray)
 {
-    Console.WriteLine(numsArray[1]);
-}
-Console.WriteLine("результативный massive");
-numsArray = ds.Calculate(numsArray);
-for (int i = 0; i <= numsArray.Length - 1; i++)
-{
-    Console.WriteLine(numsArray[i]+"\t");
+    Console.Write(num + "\t");
 }
 Console.WriteLine();
-Console.ReadKey(); 
+
+int result = ds.GetMultOddArrEl(numsArray);
+
+Console.WriteLine("Произведение нечёт элем м " + result);
+
+Console.ReadKey();

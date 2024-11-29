@@ -9,10 +9,10 @@ namespace Tyuiu.NedelkinFA.Sprint4.Task0.V15.Test
         public void ValidCalc()
         {
             DataService ds = new DataService();
-            int[] numsArray = { 4, 0, 3, 0, 10 };
-            int[] res = ds.Calculate(numsArray);
-            int[] numswaitArray = {4,1,3,1,10};
-            CollectionAssert.AreEqual(numswaitArray, res);
+            int[] numsArray = { 9, 8, 7, 6, 5, 7, 3, 2, 7, 3 };
+            int result = ds.GetMultOddArrEl(numsArray);
+            int expected = 9 * 7 * 5 * 7 * 3 * 7 * 3;
+            Assert.AreEqual(expected, result);
         }
     }
 }
