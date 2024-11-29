@@ -14,4 +14,4 @@ for (int i = 0; i <= numsArray.Length - 1; i++)
     Console.WriteLine(numsArray[i]+"\t");
 }
 Console.WriteLine();
-Console.ReadKey();
+Console.ReadKey(); 
