@@ -9,9 +9,9 @@ namespace Tyuiu.NedelkinFA.Sprint4.Task1.V13.Test
         public void ValidCalculate()
         {
             DataService ds = new DataService();
-            int[] numsArray = {4,0,3,12,11};
+            int[] numsArray = { 8, 1, 5, 4, 2, 1, 2, 7, 6, 1 };
             int res = ds.Calculate(numsArray);
-            int wait = 23;
+            int wait = 22;
             Assert.AreEqual(wait, res);
         }
     }

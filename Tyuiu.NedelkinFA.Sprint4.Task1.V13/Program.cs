@@ -1,22 +1,22 @@
 ﻿using Tyuiu.NedelkinFA.Sprint4.Task1.V13.Lib;
+
 DataService ds = new DataService();
-int len;
-Console.WriteLine("kolichestvo elem");
-len = Convert.ToInt32(Console.ReadLine());
+int len = 10;
 int[] numsArray = new int[len];
-for (int i = 0; i <= len - 1; i++)
+
+Console.WriteLine("Введите 10 элементов массива (в диапазоне от 0 до 8):");
+for (int i = 0; i < len; i++)
 {
-    Console.WriteLine("i " + i + "elem massive");
     numsArray[i] = Convert.ToInt32(Console.ReadLine());
 }
-Console.WriteLine();
-Console.WriteLine("massive:");
-for  (int i = 0;i <= len - 1;i++)
+
+Console.WriteLine("Массив:");
+foreach (int num in numsArray)
 {
-    Console.WriteLine(numsArray[i]+"\t");
+    Console.Write(num + "\t");
 }
 Console.WriteLine();
-Console.WriteLine();
+
 int res = ds.Calculate(numsArray);
-Console.WriteLine(res);
+Console.WriteLine($"Сумма четных элементов массива: {res}");
 Console.ReadKey();
