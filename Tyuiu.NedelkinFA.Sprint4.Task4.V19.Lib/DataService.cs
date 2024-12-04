@@ -6,17 +6,20 @@ namespace Tyuiu.NedelkinFA.Sprint4.Task4.V19.Lib
     {
         public int Calculate(int[,] matrix)
         {
-            int rows = array.GetUpperBound(0) + 1;
-            int columns = array.Length / rows;
-            int max = array[2, 0];
-            for (int j = 1; j < columns; j++)
+            int sum = 0;
+            int rows = matrix.GetLength(0);
+            int columns = matrix.GetLength(1);
+            for (int i = 0; i < rows; i++)
             {
-                if (array[2, j] > max)
+                for (int j = 0; j < columns; j++)
                 {
-                    max = array[2, j];
+                    if (matrix[i, j] % 2 != 0)
+                    {
+                        sum += matrix[i, j];
+                    }
                 }
             }
-            return max;
+            return sum;
         }
     }
 }

@@ -1,26 +1,25 @@
 ﻿using Tyuiu.NedelkinFA.Sprint4.Task4.V19.Lib;
 DataService ds = new DataService();
-Console.WriteLine("kolich strok");
-int rows = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("kolich stolb");
-int columns = Convert.ToInt32(Console.ReadLine());
+int rows = 5;
+int columns = 5;
 int[,] mtrx = new int[rows, columns];
-for  (int i = 0; i < rows; i++)
+for (int i = 0; i < rows; i++)
 {
     for (int j = 0; j < columns; j++)
     {
         Console.WriteLine($"napishi {i}, {j} element");
-        mtrx[i,j] = Convert.ToInt32(Console.ReadLine());
+        mtrx[i, j] = Convert.ToInt32(Console.ReadLine());
     }
 }
-Console.WriteLine("\nMassive");
-for (int i = 0;i < columns; i++)
+Console.WriteLine("\nMassive:");
+for (int i = 0; i < rows; i++)
 {
-    for (int j = 0;j < rows; j++)
+    for (int j = 0; j < columns; j++)
     {
-        Console.WriteLine($"{mtrx[i,j]} \t");
+        Console.Write($"{mtrx[i, j]} \t");
     }
+    Console.WriteLine();
 }
 int res = ds.Calculate(mtrx);
-Console.WriteLine("nul elem:" + res);
+Console.WriteLine("summa nechetnih elementov: " + res);
 Console.ReadKey();
