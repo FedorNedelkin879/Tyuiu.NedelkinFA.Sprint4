@@ -1,19 +1,20 @@
 ﻿using Tyuiu.NedelkinFA.Sprint4.Task7.V30.Lib;
-int rows = 3;
+int rows = 5;
 int columns = 3;
 int[,] mtrx = new int[rows, columns];
-string str = "103050709";
+string str = "684259137159648";
 DataService ds = new DataService();
-int index  = 0;
+int index = 0;
 Console.WriteLine("\nMassive:");
 for (int i = 0; i < rows; i++)
 {
     for (int j = 0; j < columns; j++)
     {
-        Console.WriteLine($"{str[index]}\t");
+        mtrx[i, j] = int.Parse(str[index].ToString());
+        Console.Write($"{mtrx[i, j]}\t");
         index++;
     }
 }
-int res = ds.Calculate(rows, columns, str);
-Console.WriteLine("kolichestvo nulevih elem = " + res);
+int res = ds.Calculate(mtrx);
+Console.WriteLine("\nProizvedenie chetnykh chisel = " + res);
 Console.ReadKey();
