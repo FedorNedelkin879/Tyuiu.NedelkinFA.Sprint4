@@ -6,16 +6,16 @@ namespace Tyuiu.NedelkinFA.Sprint4.Task5.V15.Test
     public class DataServiceTest
     {
         [TestMethod]
-        public void MaxInThirdRow()
+        public void SumOfPositiveElements()
         {
             DataService ds = new DataService();
-            int[,] mas2 = new int[5, 5]  { { 5, 7, 6, 6, 5 },
-                                           { 5, 5, 5, 4, 6 },
-                                           { 8, 5, 7, 4, 7 },
-                                           { 7, 6, 7, 4, 7 },
-                                           { 5, 8, 7, 8, 8 } };
+            int[,] mas2 = new int[5, 5]  { { -1, 2, -3, 4, -5 },
+                                           { 1, -1, 2, -2, 3 },
+                                           { -1, -2, -3, -4, -5 },
+                                           { 5, 6, -7, 8, -9 },
+                                           { -10, 11, -12, 13, -14 } };
             int res = ds.Calculate(mas2);
-            int wait = 8;
+            int wait = 45;
             Assert.AreEqual(wait, res);
         }
     }

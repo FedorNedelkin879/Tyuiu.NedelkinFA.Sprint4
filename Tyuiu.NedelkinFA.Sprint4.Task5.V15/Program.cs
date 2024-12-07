@@ -1,5 +1,7 @@
 ﻿using Tyuiu.NedelkinFA.Sprint4.Task5.V15.Lib;
-DataService ds  = new DataService();
+using System;
+
+DataService ds = new DataService();
 Random rnd = new Random();
 Console.WriteLine("kolichestvo strok v massive: ");
 int rows = Convert.ToInt32(Console.ReadLine());
@@ -10,7 +12,7 @@ for (int i = 0; i < rows; i++)
 {
     for (int j = 0; j < columns; j++)
     {
-        mtrx[i, j] = rnd.Next(-1, 1);
+        mtrx[i, j] = rnd.Next(-6, 5);
     }
 }
 Console.WriteLine("\nMassive:");
@@ -23,5 +25,5 @@ for (int i = 0; i < rows; i++)
     Console.WriteLine();
 }
 int res = ds.Calculate(mtrx);
-Console.WriteLine("summa nulevih elementov: " + res);
+Console.WriteLine("summa polozhitel'nykh elementov: " + res);
 Console.ReadKey();
