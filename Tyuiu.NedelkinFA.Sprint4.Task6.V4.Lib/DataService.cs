@@ -6,8 +6,8 @@ namespace Tyuiu.NedelkinFA.Sprint4.Task6.V4.Lib
     {
         public string[] Calculate(string[] array)
         {
-            string[] mas = Array.FindAll(arrayStrings, x => x.Length == 7);
-            return mas.Length;
+            string[] mas = Array.FindAll(array, x => x.Length < 7); 
+            return mas;
         }
     }
 }

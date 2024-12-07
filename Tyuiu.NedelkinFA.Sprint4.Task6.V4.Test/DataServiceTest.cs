@@ -9,10 +9,10 @@ namespace Tyuiu.NedelkinFA.Sprint4.Task6.V4.Test
         public void ValidCalc()
         {
             DataService ds = new DataService();
-            var week = new string[] { "пн", "вт", "ср", "чт", "пт", "сб", "вс" };
-            int res = ds.Calculate(week);
-            int wait = 4;
-            Assert.AreEqual(wait, res);
+            var cities = new string[] { "Москва", "Санкт Петербург", "Новосибирск", "Екатеринбург", "Нижний Новгород", "Казахстан", "Самара" };
+            string[] res = ds.Calculate(cities);
+            string[] wait = new string[] { "Москва", "Самара" };
+            CollectionAssert.AreEqual(wait, res);
         }
     }
 }
